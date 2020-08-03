@@ -12,7 +12,7 @@ image_cols = 775
 def create_train_data():
     train_data_path = os.path.join(data_path, 'train')
     images = os.listdir(train_data_path)
-    total = len(images) / 2
+    total = int(len(images) / 2)
 
     imgs = np.ndarray((total, 1, image_rows, image_cols), dtype=np.uint8)
     imgs_mask = np.ndarray((total, 1, image_rows, image_cols), dtype=np.uint8)
@@ -56,7 +56,7 @@ def load_train_data():
 def create_test_data():
     train_data_path = os.path.join(data_path, 'test')
     images = os.listdir(train_data_path)
-    total = len(images)/2
+    total = int(len(images)/2)
 
     imgs = np.ndarray((total, 1, image_rows, image_cols), dtype=np.uint8)
 
